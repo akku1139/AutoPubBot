@@ -1,7 +1,7 @@
 import discord
 
 client = discord.Client(
-  intents = discord.Intents.default()
+  intents = discord.Intents(messages=True)
 )
 
 @client.event
