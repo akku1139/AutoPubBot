@@ -6,7 +6,8 @@ client = discord.Client(
 
 @client.event
 async def on_message(m: discord.Message):
-  await m.publish()
+  if m.channel.is_news():
+    await m.publish()
 
 if __name__ == "__main__":
   import os
